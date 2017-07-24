@@ -45,7 +45,7 @@
             {!! Former::password('password')->placeholder(trans('texts.password'))->raw() !!}
         </div>
 
-        {!! Button::success(trans('texts.login'))
+        {!! Button::danger(trans('texts.login'))
                     ->withAttributes(['id' => 'loginButton', 'class' => 'green'])
                     ->large()->submit()->block() !!}
 
