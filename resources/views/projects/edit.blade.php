@@ -49,7 +49,7 @@
 
 	<center class="buttons">
         {!! Button::normal(trans('texts.cancel'))->large()->asLinkTo(url('/projects'))->appendIcon(Icon::create('remove-circle')) !!}
-        {!! Button::success(trans('texts.save'))->submit()->large()->appendIcon(Icon::create('floppy-disk')) !!}
+        {!! Button::danger(trans('texts.save'))->submit()->large()->appendIcon(Icon::create('floppy-disk')) !!}
 		@if ($project && Auth::user()->can('create', ENTITY_TASK))
 	    	{!! Button::primary(trans('texts.new_task'))->large()
 					->asLinkTo(url('/tasks/create/' . ($project->client ? $project->client->public_id : '0'). '/' . $project->public_id))

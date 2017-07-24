@@ -86,10 +86,10 @@
 						@endif
 						@if (Utils::isNinjaProd())
 							@if (Auth::user()->confirmed)
-						   		{!! Former::actions( Button::success(trans('texts.plan_upgrade'))->large()->withAttributes(['onclick' => 'showChangePlan()'])->appendIcon(Icon::create('plus-sign'))) !!}
+						   		{!! Former::actions( Button::danger(trans('texts.plan_upgrade'))->large()->withAttributes(['onclick' => 'showChangePlan()'])->appendIcon(Icon::create('plus-sign'))) !!}
 							@endif
 						@elseif (!$account->hasFeature(FEATURE_WHITE_LABEL))
-						   {!! Former::actions( Button::success(trans('texts.white_label_button'))->large()->withAttributes(['onclick' => 'loadImages("#whiteLabelModal");$("#whiteLabelModal").modal("show");'])->appendIcon(Icon::create('plus-sign'))) !!}
+						   {!! Former::actions( Button::danger(trans('texts.white_label_button'))->large()->withAttributes(['onclick' => 'loadImages("#whiteLabelModal");$("#whiteLabelModal").modal("show");'])->appendIcon(Icon::create('plus-sign'))) !!}
 						@endif
 					@endif
 				@endif
@@ -190,7 +190,7 @@
 				<div class="form-group">
 					<label for="modules" class="control-label col-lg-4 col-sm-4"></label>
 					<div class="col-lg-8 col-sm-8">
-						{!! Button::success(trans('texts.save'))->submit()->large()->appendIcon(Icon::create('floppy-disk')) !!}
+						{!! Button::danger(trans('texts.save'))->submit()->large()->appendIcon(Icon::create('floppy-disk')) !!}
 					</div>
 				</div>
 			</div>
@@ -218,7 +218,7 @@
 				<div class="form-group">
 					<label for="modules" class="control-label col-lg-4 col-sm-4"></label>
 					<div class="col-lg-8 col-sm-8">
-						{!! Button::success(trans('texts.save'))->submit()->large()->appendIcon(Icon::create('floppy-disk')) !!}
+						{!! Button::danger(trans('texts.save'))->submit()->large()->appendIcon(Icon::create('floppy-disk')) !!}
 					</div>
 				</div>
 			</div>

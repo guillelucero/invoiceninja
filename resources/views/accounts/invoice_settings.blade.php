@@ -337,7 +337,7 @@
 
     @if (Auth::user()->hasFeature(FEATURE_INVOICE_SETTINGS))
         <center>
-            {!! Button::success(trans('texts.save'))->large()->submit()->appendIcon(Icon::create('floppy-disk')) !!}
+            {!! Button::danger(trans('texts.save'))->large()->submit()->appendIcon(Icon::create('floppy-disk')) !!}
         </center>
     @endif
 

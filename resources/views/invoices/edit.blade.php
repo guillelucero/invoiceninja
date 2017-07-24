@@ -575,11 +575,11 @@
             @else
                 @if (!$invoice->is_deleted)
 					@if ($invoice->isSent())
-						{!! Button::success(trans("texts.save_{$entityType}"))->withAttributes(array('id' => 'saveButton', 'onclick' => 'onSaveClick()'))->appendIcon(Icon::create('floppy-disk')) !!}
+						{!! Button::danger(trans("texts.save_{$entityType}"))->withAttributes(array('id' => 'saveButton', 'onclick' => 'onSaveClick()'))->appendIcon(Icon::create('floppy-disk')) !!}
 					@else
 						{!! Button::normal(trans("texts.save_draft"))->withAttributes(array('id' => 'draftButton', 'onclick' => 'onSaveDraftClick()'))->appendIcon(Icon::create('floppy-disk')) !!}
 						@if (! $invoice->trashed())
-							{!! Button::success(trans($invoice->is_recurring ? "texts.mark_ready" : "texts.mark_sent"))->withAttributes(array('id' => 'saveButton', 'onclick' => 'onMarkSentClick()'))->appendIcon(Icon::create('globe')) !!}
+							{!! Button::danger(trans($invoice->is_recurring ? "texts.mark_ready" : "texts.mark_sent"))->withAttributes(array('id' => 'saveButton', 'onclick' => 'onMarkSentClick()'))->appendIcon(Icon::create('globe')) !!}
 						@endif
 					@endif
 					@if (! $invoice->trashed())

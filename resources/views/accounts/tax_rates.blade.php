@@ -50,7 +50,7 @@
       @include('partials.tax_rates', ['taxRateLabel' => trans('texts.default_tax_rate_id')])
 
       &nbsp;
-      {!! Former::actions( Button::success(trans('texts.save'))->submit()->appendIcon(Icon::create('floppy-disk')) ) !!}
+      {!! Former::actions( Button::danger(trans('texts.save'))->submit()->appendIcon(Icon::create('floppy-disk')) ) !!}
       {!! Former::close() !!}
   </div>
   </div>

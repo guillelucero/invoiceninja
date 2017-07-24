@@ -26,7 +26,7 @@
     </div>
 
     <center>
-        {!! Button::success(trans('texts.save'))->submit()->large()->appendIcon(Icon::create('floppy-disk')) !!}
+        {!! Button::danger(trans('texts.save'))->submit()->large()->appendIcon(Icon::create('floppy-disk')) !!}
     </center>
 
     {!! Former::close() !!}

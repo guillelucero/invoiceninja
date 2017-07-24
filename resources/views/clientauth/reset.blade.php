@@ -39,7 +39,7 @@
             {!! Former::password('password_confirmation')->placeholder(trans('texts.confirm_password'))->raw() !!}
         </div>
 
-        <p>{!! Button::success(trans('texts.save'))->large()->submit()->withAttributes(['class' => 'green'])->block() !!}</p>
+        <p>{!! Button::danger(trans('texts.save'))->large()->submit()->withAttributes(['class' => 'green'])->block() !!}</p>
 
         {!! Former::close() !!}
     </div>

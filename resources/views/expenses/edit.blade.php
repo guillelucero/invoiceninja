@@ -205,7 +205,7 @@
         @if (Auth::user()->canCreateOrEdit(ENTITY_EXPENSE, $expense))
             @if (Auth::user()->hasFeature(FEATURE_EXPENSES))
                 @if (!$expense || !$expense->is_deleted)
-                    {!! Button::success(trans('texts.save'))
+                    {!! Button::danger(trans('texts.save'))
                             ->appendIcon(Icon::create('floppy-disk'))
                             ->large()
                             ->submit() !!}

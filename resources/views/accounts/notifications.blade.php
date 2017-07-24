@@ -56,7 +56,7 @@
 
 
     {!! Former::actions(
-            Button::success(trans('texts.save'))
+            Button::danger(trans('texts.save'))
                 ->submit()->large()
                 ->appendIcon(Icon::create('floppy-disk'))) !!}
 

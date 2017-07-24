@@ -19,7 +19,7 @@
       {!! Former::checkbox('fill_products')->text(trans('texts.fill_products_help'))->value(1) !!}
       {!! Former::checkbox('update_products')->text(trans('texts.update_products_help'))->value(1) !!}
       &nbsp;
-      {!! Former::actions( Button::success(trans('texts.save'))->submit()->appendIcon(Icon::create('floppy-disk')) ) !!}
+      {!! Former::actions( Button::danger(trans('texts.save'))->submit()->appendIcon(Icon::create('floppy-disk')) ) !!}
       {!! Former::close() !!}
   </div>
   </div>

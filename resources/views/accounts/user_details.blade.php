@@ -83,7 +83,7 @@
                     ->appendIcon(Icon::create('send'))
                     ->asLinkTo(URL::to('/resend_confirmation'))->large() !!}
         @endif
-        {!! Button::success(trans('texts.save'))
+        {!! Button::danger(trans('texts.save'))
                 ->submit()->large()
                 ->appendIcon(Icon::create('floppy-disk')) !!}
     </center>

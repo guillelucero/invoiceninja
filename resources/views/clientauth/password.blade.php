@@ -35,7 +35,7 @@
             <div class="alert alert-danger">{{ Session::get('error') }}</div>
         @endif
 
-        {!! Button::success(trans('texts.send_email'))
+        {!! Button::danger(trans('texts.send_email'))
                     ->withAttributes(['class' => 'green'])
                     ->large()->submit()->block() !!}
 

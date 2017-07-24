@@ -150,7 +150,7 @@
         <br/>
         <center>
             {!! Button::normal(trans('texts.use_another_provider'))->large()->asLinkTo(URL::to('/gateways/create?other_providers=true')) !!}
-            {!! Button::success(trans('texts.sign_up_with_wepay'))->submit()->large() !!}
+            {!! Button::danger(trans('texts.sign_up_with_wepay'))->submit()->large() !!}
         </center>
 
 

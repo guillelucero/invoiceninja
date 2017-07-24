@@ -295,7 +295,7 @@
 	                ->asLinkTo(URL::to('/settings/customize_design') . '?design_id=' . CUSTOM_DESIGN1)
 	                ->large(),
             Auth::user()->hasFeature(FEATURE_CUSTOMIZE_INVOICE_DESIGN) ?
-                Button::success(trans('texts.save'))
+                Button::danger(trans('texts.save'))
                     ->submit()->large()
                     ->appendIcon(Icon::create('floppy-disk'))
                     ->withAttributes(['class' => 'save-button']) :

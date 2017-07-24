@@ -42,7 +42,7 @@
 
   {!! Former::actions(
       Button::normal(trans('texts.cancel'))->large()->asLinkTo(URL::to('/settings/tax_rates'))->appendIcon(Icon::create('remove-circle')),
-      Button::success(trans('texts.save'))->submit()->large()->appendIcon(Icon::create('floppy-disk'))
+      Button::danger(trans('texts.save'))->submit()->large()->appendIcon(Icon::create('floppy-disk'))
   ) !!}
 
   {!! Former::close() !!}

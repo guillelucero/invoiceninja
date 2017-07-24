@@ -149,27 +149,27 @@
     @if (Auth::user()->canCreateOrEdit(ENTITY_TASK, $task))
         @if (Auth::user()->hasFeature(FEATURE_TASKS))
             @if ($task && $task->is_running)
-                {!! Button::success(trans('texts.save'))->large()->appendIcon(Icon::create('floppy-disk'))->withAttributes(['id' => 'save-button']) !!}
+                {!! Button::danger(trans('texts.save'))->large()->appendIcon(Icon::create('floppy-disk'))->withAttributes(['id' => 'save-button']) !!}
                 {!! Button::primary(trans('texts.stop'))->large()->appendIcon(Icon::create('stop'))->withAttributes(['id' => 'stop-button']) !!}
             @elseif ($task && $task->is_deleted)
                 {!! Button::normal(trans('texts.cancel'))->large()->asLinkTo(HTMLUtils::previousUrl('/tasks'))->appendIcon(Icon::create('remove-circle')) !!}
                 {!! Button::primary(trans('texts.restore'))->large()->withAttributes(['onclick' => 'submitAction("restore")'])->appendIcon(Icon::create('cloud-download')) !!}
             @elseif ($task && $task->trashed())
                 {!! Button::normal(trans('texts.cancel'))->large()->asLinkTo(HTMLUtils::previousUrl('/tasks'))->appendIcon(Icon::create('remove-circle')) !!}
-                {!! Button::success(trans('texts.save'))->large()->appendIcon(Icon::create('floppy-disk'))->withAttributes(['id' => 'save-button']) !!}
+                {!! Button::danger(trans('texts.save'))->large()->appendIcon(Icon::create('floppy-disk'))->withAttributes(['id' => 'save-button']) !!}
                 {!! Button::primary(trans('texts.restore'))->large()->withAttributes(['onclick' => 'submitAction("restore")'])->appendIcon(Icon::create('cloud-download')) !!}
             @else
                 {!! Button::normal(trans('texts.cancel'))->large()->asLinkTo(HTMLUtils::previousUrl('/tasks'))->appendIcon(Icon::create('remove-circle')) !!}
                 @if ($task)
-                    {!! Button::success(trans('texts.save'))->large()->appendIcon(Icon::create('floppy-disk'))->withAttributes(['id' => 'save-button']) !!}
+                    {!! Button::danger(trans('texts.save'))->large()->appendIcon(Icon::create('floppy-disk'))->withAttributes(['id' => 'save-button']) !!}
                     {!! Button::primary(trans('texts.resume'))->large()->appendIcon(Icon::create('play'))->withAttributes(['id' => 'resume-button']) !!}
                     {!! DropdownButton::normal(trans('texts.more_actions'))
                           ->withContents($actions)
                           ->large()
                           ->dropup() !!}
                 @else
-                    {!! Button::success(trans('texts.save'))->large()->appendIcon(Icon::create('floppy-disk'))->withAttributes(['id' => 'save-button']) !!}
-                    {!! Button::success(trans('texts.start'))->large()->appendIcon(Icon::create('play'))->withAttributes(['id' => 'start-button']) !!}
+                    {!! Button::danger(trans('texts.save'))->large()->appendIcon(Icon::create('floppy-disk'))->withAttributes(['id' => 'save-button']) !!}
+                    {!! Button::danger(trans('texts.start'))->large()->appendIcon(Icon::create('play'))->withAttributes(['id' => 'start-button']) !!}
                 @endif
             @endif
         @else

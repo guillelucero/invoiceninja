@@ -201,7 +201,7 @@
         {!! Button::normal(trans('texts.help'))->withAttributes(['onclick' => 'showHelp()'])->appendIcon(Icon::create('question-sign')) !!}
         {!! Button::normal(trans('texts.cancel'))->asLinkTo(URL::to('/settings/invoice_design'))->appendIcon(Icon::create('remove-circle')) !!}
         @if (Auth::user()->hasFeature(FEATURE_CUSTOMIZE_INVOICE_DESIGN))
-            {!! Button::success(trans('texts.save'))->withAttributes(['onclick' => 'submitForm()'])->appendIcon(Icon::create('floppy-disk'))->withAttributes(['class' => 'save-button']) !!}
+            {!! Button::danger(trans('texts.save'))->withAttributes(['onclick' => 'submitForm()'])->appendIcon(Icon::create('floppy-disk'))->withAttributes(['class' => 'save-button']) !!}
         @endif
     </div>
     </div>

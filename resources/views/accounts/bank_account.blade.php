@@ -171,14 +171,14 @@
                     ->large()
                     ->asLinkTo(URL::to('/settings/bank_accounts'))
                     ->appendIcon(Icon::create('remove-circle')) : false,
-            Button::success(trans('texts.validate'))
+            Button::danger(trans('texts.validate'))
                 ->withAttributes([
                     'data-bind' => 'css: {disabled: disableValidate}, visible: page() == "login"',
                     'onclick' => 'validate()'
                 ])
                 ->large()
                 ->appendIcon(Icon::create('lock')),
-            Button::success(trans('texts.save'))
+            Button::danger(trans('texts.save'))
                 ->withAttributes([
                     'data-bind' => 'css: {disabled: disableSave}, visible: page() == "setup"',
                     'style' => 'display:none',
@@ -186,7 +186,7 @@
                 ])
                 ->large()
                 ->appendIcon(Icon::create('floppy-disk'))   ,
-            Button::success(trans('texts.import'))
+            Button::danger(trans('texts.import'))
                 ->withAttributes([
                     'data-bind' => 'css: {disabled: disableSaveExpenses}, visible: page() == "import"',
                     'style' => 'display:none',

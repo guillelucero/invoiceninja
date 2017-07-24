@@ -161,7 +161,7 @@
 				->withAttributes(array('onclick' => 'onExportClick()'))
 				->appendIcon(Icon::create('export'))
 				->large() !!}
-		{!! Button::success(trans('texts.run'))
+		{!! Button::danger(trans('texts.run'))
 				->withAttributes(array('id' => 'submitButton'))
 				->submit()
 				->appendIcon(Icon::create('play'))

@@ -29,11 +29,11 @@
 
     <center>
         @if(isset($amount))
-            {!! Button::success(strtoupper(trans('texts.pay_now') . ' - ' . $account->formatMoney($amount, $client, CURRENCY_DECORATOR_CODE)  ))
+            {!! Button::danger(strtoupper(trans('texts.pay_now') . ' - ' . $account->formatMoney($amount, $client, CURRENCY_DECORATOR_CODE)  ))
                             ->submit()
                             ->large() !!}
         @else
-            {!! Button::success(strtoupper(trans('texts.add_paypal_account') ))
+            {!! Button::danger(strtoupper(trans('texts.add_paypal_account') ))
                         ->submit()
                         ->large() !!}
         @endif

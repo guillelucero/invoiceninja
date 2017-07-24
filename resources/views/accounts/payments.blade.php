@@ -32,7 +32,7 @@
 						->text('enable')
 			 			->value(1) !!}
 			<br/>
-            {!! Former::actions( Button::success(trans('texts.save'))->withAttributes(['id' => 'formSave'])->submit()->appendIcon(Icon::create('floppy-disk')) ) !!}
+            {!! Former::actions( Button::danger(trans('texts.save'))->withAttributes(['id' => 'formSave'])->submit()->appendIcon(Icon::create('floppy-disk')) ) !!}
         </div>
     </div>
 

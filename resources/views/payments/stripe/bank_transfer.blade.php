@@ -234,13 +234,13 @@
 
         {!! Button::normal(strtoupper(trans('texts.cancel')))->large()->asLinkTo($invitation->getLink()) !!}
         &nbsp;&nbsp;
-        {!! Button::success(strtoupper(trans('texts.add_account')))
+        {!! Button::danger(strtoupper(trans('texts.add_account')))
                         ->submit()
                         ->withAttributes(['id'=>'add_account_button'])
                         ->large() !!}
 
         @if ($accountGateway->getPlaidEnabled() && !empty($amount))
-            {!! Button::success(strtoupper(trans('texts.pay_now') . ' - ' . $account->formatMoney($amount, $client, CURRENCY_DECORATOR_CODE)  ))
+            {!! Button::danger(strtoupper(trans('texts.pay_now') . ' - ' . $account->formatMoney($amount, $client, CURRENCY_DECORATOR_CODE)  ))
                         ->submit()
                         ->withAttributes(['style'=>'display:none', 'id'=>'pay_now_button'])
                         ->large() !!}

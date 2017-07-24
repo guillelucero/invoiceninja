@@ -26,7 +26,7 @@
     @if (Auth::user()->hasFeature(FEATURE_API))
       {!! Former::actions( 
           Button::normal(trans('texts.cancel'))->asLinkTo(URL::to('/settings/api_tokens'))->appendIcon(Icon::create('remove-circle'))->large(),
-          Button::success(trans('texts.save'))->submit()->large()->appendIcon(Icon::create('floppy-disk'))
+          Button::danger(trans('texts.save'))->submit()->large()->appendIcon(Icon::create('floppy-disk'))
       ) !!}
     @else
         <script>

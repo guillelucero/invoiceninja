@@ -36,7 +36,7 @@
     <li>{{ trans('texts.pro_upgrade_feature2') }}</li>
     <li>{{ trans('texts.much_more') }}</li>
   </ul>
-  {!! Button::success(trans('texts.go_ninja_pro'))->withAttributes(['onclick' => 'submitUpgradeForm("pro")'])->large() !!}
+  {!! Button::danger(trans('texts.go_ninja_pro'))->withAttributes(['onclick' => 'submitUpgradeForm("pro")'])->large() !!}
 </div>
 <div class="col-md-4 columns text-center">
   <h2>{{ trans('texts.plan_enterprise') }}</h2>
@@ -55,7 +55,7 @@
     <li>{{ trans('texts.enterprise_upgrade_feature2') }}</li>
     <li>{{ trans('texts.much_more') }}</li>
   </ul>
-  {!! Button::success(trans('texts.go_enterprise'))->withAttributes(['onclick' => 'submitUpgradeForm("enterprise")'])->large() !!}
+  {!! Button::danger(trans('texts.go_enterprise'))->withAttributes(['onclick' => 'submitUpgradeForm("enterprise")'])->large() !!}
 </div>
 </div>
 </div>

@@ -38,7 +38,7 @@
     <div>
         {!! Former::text('email')->placeholder(trans('texts.email_address'))->raw() !!}
     </div>
-    {!! Button::success(trans('texts.send_email'))->large()->submit()->withAttributes(['class' => 'green'])->block() !!}
+    {!! Button::danger(trans('texts.send_email'))->large()->submit()->withAttributes(['class' => 'green'])->block() !!}
 
     {!! Former::close() !!}
 

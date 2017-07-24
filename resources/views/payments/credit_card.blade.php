@@ -320,11 +320,11 @@
             &nbsp;&nbsp;
         @endif
         @if(isset($amount))
-            {!! Button::success(strtoupper(trans('texts.pay_now') . ' - ' . $account->formatMoney($amount, $client, CURRENCY_DECORATOR_CODE)  ))
+            {!! Button::danger(strtoupper(trans('texts.pay_now') . ' - ' . $account->formatMoney($amount, $client, CURRENCY_DECORATOR_CODE)  ))
                             ->submit()
                             ->large() !!}
         @else
-            {!! Button::success(strtoupper(trans('texts.add_credit_card') ))
+            {!! Button::danger(strtoupper(trans('texts.add_credit_card') ))
                         ->submit()
                         ->large() !!}
         @endif
