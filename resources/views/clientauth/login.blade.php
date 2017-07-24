@@ -41,7 +41,7 @@
         </div>
         {!! Former::hidden('remember')->raw() !!}
 
-        {!! Button::success(trans('texts.login'))
+        {!! Button::danger(trans('texts.login'))
                     ->withAttributes(['id' => 'loginButton', 'class' => 'green'])
                     ->large()->submit()->block() !!}
 
